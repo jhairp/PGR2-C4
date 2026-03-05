@@ -1,11 +1,19 @@
-#viewer360{
-position:fixed;
-top:0;
-left:0;
+.capa-superior {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  // ESTA ES LA CLAVE:
+  pointer-events: none; 
+}
 
-width:100%;
-height:100vh;
-
-z-index:0;
-overflow:hidden;
+// Pero el cuadro de login SÍ debe recibir clics
+app-login {
+  pointer-events: auto; 
 }

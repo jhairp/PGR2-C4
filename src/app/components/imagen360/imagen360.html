@@ -1,10 +1,10 @@
-<div class="contenedor-recorrido">
+<div class="contenedor-principal">
   
-  <div class="canvas-container">
+  <div class="capa-fondo">
     <app-three-js [textureUrl]="'assets/360/panorama.jpg'"></app-three-js>
   </div>
 
-  <div class="interfaz-bloqueo" *ngIf="!isLoggedIn">
+  <div class="capa-superior" *ngIf="!isLoggedIn">
     <app-login (onLoginSuccess)="handleLoginSuccess()"></app-login>
   </div>
 

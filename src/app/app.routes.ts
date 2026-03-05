@@ -1,17 +1,14 @@
 import { Routes } from '@angular/router';
-import { Login } from './components/login/login';
+import { Imagen360Component } from './components/imagen360/imagen360';
 
 export const routes: Routes = [
-
   {
-    path: 'login',
-    component: Login
+    path: 'recorrido',
+    component: Imagen360Component // Este es el padre que tiene el 3D + el Login
   },
-
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'recorrido',
     pathMatch: 'full'
   }
-
 ];
