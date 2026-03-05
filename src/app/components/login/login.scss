@@ -1,0 +1,53 @@
+.login-card {
+  background: rgba(255, 255, 255, 0.15); // Fondo blanco muy transparente
+  backdrop-filter: blur(15px); // El efecto de desenfoque de vidrio
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 100%;
+  max-width: 400px;
+  color: white;
+  text-align: center;
+
+  .login-header {
+    margin-bottom: 2rem;
+    h2 { margin: 0; font-size: 2rem; }
+    p { opacity: 0.8; font-size: 0.9rem; }
+  }
+
+  .input-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+
+    label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      outline: none;
+      box-sizing: border-box;
+
+      &::placeholder { color: rgba(255, 255, 255, 0.5); }
+      &:focus { border-color: #007bff; }
+    }
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover { background: #0056b3; }
+  }
+}
