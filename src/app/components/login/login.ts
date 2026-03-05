@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,19 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.scss']
 })
 export class Login {
+  // Evento para avisar al padre que el login fue exitoso
+  @Output() onLoginSuccess = new EventEmitter<void>();
 
-ui = {
-
-opacity: 0.9,
-
-blur: 12,
-
-scale: 1,
-
-radius: 16,
-
-buttonColor: "#4c7dff"
-
-}
-
+  onSubmit(event: Event) {
+    event.preventDefault();
+    // Aquí iría tu lógica de validación real
+    console.log("Login exitoso");
+    this.onLoginSuccess.emit();
+  }
 }
