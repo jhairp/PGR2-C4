@@ -1,1 +1,11 @@
-<div id="viewer360"></div>
+<div class="contenedor-recorrido">
+  
+  <div class="canvas-container">
+    <app-three-js [textureUrl]="'assets/360/panorama.jpg'"></app-three-js>
+  </div>
+
+  <div class="interfaz-bloqueo" *ngIf="!isLoggedIn">
+    <app-login (onLoginSuccess)="handleLoginSuccess()"></app-login>
+  </div>
+
+</div>
